@@ -30,8 +30,10 @@ public class FirstProject{
             System.out.println("Play again? (true/false)");    
             boolean play = scan.nextBoolean();
             if (play == false){
+                
                 break;
             }
+            scan.close();
             
         }
         
