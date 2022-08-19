@@ -19,22 +19,22 @@ public class FirstProject{
 
             int numberAnswer = randomNumber.nextInt(topNum); //The number that need to be guessed
             
-            boolean numberInRange = false;
+            // boolean numberInRange = false;
 
             System.out.println("\nLives remaining: "+lives+"\n"); //Total lives remaining
             
-            while (numberInRange = false){
+            // while (numberInRange = false){
                 
                 System.out.print("Guess a number (0-9): "); //Guess number
                 guessedNumber = scan.nextInt();
                 
-                if(guessedNumber<= 0 && guessedNumber>10){
-                    numberInRange = true;
-                }
-                else{
-                    System.out.println("Please select the correct value.");
-                }
-            }
+            //     if(guessedNumber<= 0 && guessedNumber>10){
+            //         numberInRange = true;
+            //     }
+            //     else{
+            //         System.out.println("Please select the correct value.");
+            //     }
+            // }
 
            
 
