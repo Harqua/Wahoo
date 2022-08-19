@@ -19,16 +19,28 @@ public class FirstProject{
 
             int numberAnswer = randomNumber.nextInt(topNum); //The number that need to be guessed
             
-            System.out.println("\nLives remaining: "+lives+"\n");
+            boolean numberInRange = false;
+
+            System.out.println("\nLives remaining: "+lives+"\n"); //Total lives remaining
             
-            System.out.print("Guess a number (0-9): ");
+            while (numberInRange = false){
+                
+                System.out.print("Guess a number (0-9): "); //Guess number
+                guessedNumber = scan.nextInt();
+                
+                if(guessedNumber<= 0 && guessedNumber>10){
+                    numberInRange = true;
+                }
+                else{
+                    System.out.println("Please select the correct value.");
+                }
+            }
+
+           
+
             
 
-            guessedNumber = scan.nextInt();
-
-            
-
-            if (guessedNumber == numberAnswer){
+            if (guessedNumber == numberAnswer){ //fixed using function prolly
                 System.out.println("You guessed it!");
             }
             else{
@@ -38,17 +50,16 @@ public class FirstProject{
             
             if(lives>0){
                 System.out.print("Play again? (true/false) "); //asking whether players want to play again
-                
                 play = scan.nextBoolean();
                 
                 if (play == false){
                     
-                    break;
+                    break; //player doesn't want to play anymore
                 }
             }
             else{
-
-                System.out.println("You lost the game.");
+ 
+                System.out.println("You lost the game."); //lives becomes 0
                 break;
             }
             
